@@ -1,1 +1,1 @@
-# Node_weather
+A Weather app for particular location using Node.js , express and ejs template

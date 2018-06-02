@@ -1,16 +1,23 @@
-<htm>
+<html>
     <head>
-    <title>Express.js</title>
+    <title>Express</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
     </head>
     <body>
         <form method="post" action="/">
-            <input name="city" type="text" />
-            <input type="submit" />
+            <input class="center" name="city" type="text" placeholder="Enter a City" /><br></br>
+            <input class="button " type="submit" />
         </form>
+        <div class="Text">
         <% if(weather !== null){ %>
             <p><%= weather %></p>
           <% } %>
 
+        <% if(error !== null){ %>
+            <p><%= error %></p>
+          <% } %>
+        </div>
     </body>
 
-</htm>
+</html>
