@@ -5,6 +5,7 @@ var bodyParser=require('body-parser');
 var request=require('request')
 var api='a4af8f2e3276efc9318e1269d0db0cf0'
 
+var port = process.env.PORT || 5000;
 
 app.use(express.static('public'));
 
@@ -24,6 +25,7 @@ app.post('/',(req,res)=>{
          if(err)
          {
              console.log('err',err);
+             res.render('index',{weather:null,error:err})
          }
          else
          {  
@@ -46,6 +48,6 @@ app.post('/',(req,res)=>{
 
 
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("Server is Started");
 })
